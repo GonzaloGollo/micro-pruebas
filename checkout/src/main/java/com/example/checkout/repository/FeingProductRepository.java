@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name="products-service")
+@FeignClient(name="products", url="http://localhost:8080")
 // @LoadBalancerClient(value = "products-service", configuration = LoadBalancerConfiguration.class)//  lo sacamos para poder configurar el weight en lugar del Robin
 public interface FeingProductRepository {
 
