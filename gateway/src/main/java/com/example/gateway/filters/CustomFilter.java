@@ -1,0 +1,19 @@
+package com.example.gateway.filters;
+
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Mono;
+
+
+public class CustomFilter implements GlobalFilter {
+    Logger logger = LoggerFactory.getLogg
+
+
+    @Override
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        return null;
+    }
+}
