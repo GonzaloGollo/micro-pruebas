@@ -2,10 +2,7 @@ package com.example.checkout.controller;
 
 import com.example.checkout.model.Checkout;
 import com.example.checkout.service.ICheckoutService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +19,11 @@ private ICheckoutService checkoutService;
     }
 
     @GetMapping()
-    public Checkout getCheckout(@RequestParam List<String> productsIds){
+    public Checkout getCheckout(@RequestParam List<String> productsIds, @RequestHeader("X-Request-from") String requestFrom){
+        System.out.println("Enviado desde: " + requestFrom);
+        if (!requestFrom.equals("gateway")){
+            return null;
+        }
         return checkoutService.buildCheckout(productsIds);
     }
 

@@ -1,0 +1,38 @@
+server:
+ port: 8084
+
+spring:
+ application:
+  name: gateway-service
+ config:
+  import: "optional:configserver:"
+ cloud:
+  config:
+   discovery:
+    enable: true
+    serviceId: config-service
+  gateway:
+   routes:
+    - id: checkout-service
+      uri: lb://checkout-service
+      predicates:
+      - Path=/checkout
+      filters:
+      - AddRequestHeader=X-Request-from, gateway
+      - AddResponseHeader=X-Response-Red, Productos
+
+management:
+ endpoints:
+  web:
+   exposure:
+    include: health,info
+
+ info:
+  env:
+   enabled: true
+
+
+ eureka:
+  instance:
+   statusPageUrlPath: http://localhost:8084/actuator/info
+   healthCheckUrlPath: http://localhost:8084/actuator/health
