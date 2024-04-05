@@ -20,6 +20,10 @@ spring:
       filters:
       - AddRequestHeader=X-Request-from, gateway
       - AddResponseHeader=X-Response-Red, Productos
+    - id: products-service
+      uri: lb://products-service
+      predicates:
+      - Path=/products-service
 
 management:
  endpoints:
