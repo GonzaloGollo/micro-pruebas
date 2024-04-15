@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/02 - Reinicio2.iml" filepath="$PROJECT_DIR$/.idea/02 - Reinicio2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/checkout/checkout.iml" filepath="$PROJECT_DIR$/checkout/checkout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/products-service/products-service.iml" filepath="$PROJECT_DIR$/products-service/products-service.iml" />
-    </modules>
-  </component>
+	<component name="ProjectModuleManager">
+		<modules>
+			<module fileurl="file://$PROJECT_DIR$/.idea/02 - Reinicio2.iml"
+				filepath="$PROJECT_DIR$/.idea/02 - Reinicio2.iml" />
+			<module fileurl="file://$PROJECT_DIR$/checkout/checkout.iml"
+				filepath="$PROJECT_DIR$/checkout/checkout.iml" />
+			<module
+				fileurl="file://$PROJECT_DIR$/config-server/config-server.iml"
+				filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+			<module
+				fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml"
+				filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
+			<module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml"
+				filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+			<module
+				fileurl="file://$PROJECT_DIR$/products-service/products-service.iml"
+				filepath="$PROJECT_DIR$/products-service/products-service.iml" />
+		</modules>
+	</component>
 </project>
