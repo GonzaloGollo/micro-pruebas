@@ -1,8 +1,10 @@
 package com.example.checkout.service;
 
+import org.springframework.stereotype.Service;
+
 import com.example.checkout.model.dto.Product;
 import com.example.checkout.repository.FeingProductRepository;
-import org.springframework.stereotype.Service;
+
 
 
 @Service
