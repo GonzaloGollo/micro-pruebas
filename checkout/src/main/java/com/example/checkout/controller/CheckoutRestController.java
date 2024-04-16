@@ -2,6 +2,7 @@ package com.example.checkout.controller;
 
 import com.example.checkout.model.Checkout;
 import com.example.checkout.service.ICheckoutService;
+import jakarta.ws.rs.Path;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +18,12 @@ private ICheckoutService checkoutService;
     public CheckoutRestController(ICheckoutService checkoutService) {
         super();
         this.checkoutService = checkoutService;
+    }
+
+    @GetMapping("/{id}")
+    public Checkout getById(@PathVariable String id){
+
+        return new Checkout(id);
     }
 
     @GetMapping()
