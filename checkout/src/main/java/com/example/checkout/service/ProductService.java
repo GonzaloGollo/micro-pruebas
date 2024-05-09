@@ -8,17 +8,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.example.checkout.model.dto.Product;
-import com.example.checkout.repository.FeingProductRepository;
+import com.example.checkout.repository.FeignProductRepository;
 
 
 @Service
 public class ProductService implements IProductService{
-    private FeingProductRepository feingProductRepository;
+    private FeignProductRepository feignProductRepository;
 
     Logger log = LoggerFactory.getLogger(ProductService.class);
 
-    public ProductService(FeingProductRepository feingProductRepository) {
-        this.feingProductRepository = feingProductRepository;
+    public ProductService(FeignProductRepository feignProductRepository) {
+        this.feignProductRepository = feignProductRepository;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class ProductService implements IProductService{
     @Retry(name="product")
     public Product getProduct(String id) {
         log.info("< ---- Intentando obtener info del producto con ID:" + id);
-        return feingProductRepository.getProductById(id, true);
+        return feignProductRepository.getProductById(id, false);
     }
 
     public Product getProductFallbackMethod(String id, CallNotPermittedException exception){
