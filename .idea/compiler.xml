@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-	<component name="CompilerConfiguration">
-		<annotationProcessing>
-			<profile name="Maven default annotation processors profile"
-				enabled="true">
-				<sourceOutputDir name="target/generated-sources/annotations" />
-				<sourceTestOutputDir
-					name="target/generated-test-sources/test-annotations" />
-				<outputRelativeToContentRoot value="true" />
-				<module name="eureka-service" />
-				<module name="config-server" />
-				<module name="products-service" />
-				<module name="checkout" />
-				<module name="gateway" />
-			</profile>
-		</annotationProcessing>
-		<bytecodeTargetLevel>
-			<module name="checkout" target="17" />
-			<module name="config-server" target="17" />
-			<module name="eureka-service" target="17" />
-			<module name="gateway" target="17" />
-			<module name="products-service" target="17" />
-		</bytecodeTargetLevel>
-	</component>
-	<component name="JavacSettings">
-		<option name="ADDITIONAL_OPTIONS_OVERRIDE">
-			<module name="checkout" options="-parameters" />
-			<module name="config-server" options="-parameters" />
-			<module name="eureka-service" options="-parameters" />
-			<module name="gateway" options="-parameters" />
-			<module name="products-service" options="-parameters" />
-		</option>
-	</component>
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-service" />
+        <module name="config-server" />
+        <module name="products-service" />
+        <module name="payments" />
+        <module name="checkout" />
+        <module name="gateway" />
+        <module name="notifications" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="checkout" target="17" />
+      <module name="config-server" target="17" />
+      <module name="eureka-service" target="17" />
+      <module name="gateway" target="17" />
+      <module name="notifications" target="17" />
+      <module name="payments" target="17" />
+      <module name="products-service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="checkout" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-service" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="notifications" options="-parameters" />
+      <module name="payments" options="-parameters" />
+      <module name="products-service" options="-parameters" />
+    </option>
+  </component>
 </project>
